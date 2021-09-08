@@ -15,3 +15,5 @@ Step 4. Send 4B tokens to Presale Contract (To be deployed after Ronin Token Con
 Step 5. Call "excludeFromAllFees" function to exclude Presale contract from any fee (SUPER IMPORTANT, NOT TO BE FORGOTTEN OR WE ARE FUCKED!!!!!!)
 **************************************************************************************************************************************************
 
+Step 6. Execute "Launch" after adding LP or no trading can start
+
