@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "ROUTER",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Stores constant shared between the token and presale contracts Prevents accidental mismatches between contracts Uniswap v2 router 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D testnet PCS router 0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"RoninShared.sol": "RoninShared"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"RoninShared.sol": {
+			"keccak256": "0xf129784922517cf55fb0d0b78b80f773c5e6f6f3349411c5a74361ccbe539b28",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://65b614151b2469efece05749c911c1a3d76c882c03a655f68de61684363dc285",
+				"dweb:/ipfs/QmWWScxCh9DNm3kqzWVBvs4u1Vzzk9gw9YYJCStt82HhDp"
+			]
+		}
+	},
+	"version": 1
+}
