@@ -46,7 +46,7 @@ contract Ronin is ERC20, Ownable, RoninShared {
     uint256 private launchedAt;
     bool public tradingOpened;
     
-    address public marketingWalletAddress = 0x98D440bd56431Ea662f2017be32D6a86D4782A30;
+    address public marketingWalletAddress = 0x962B723Ed0B81A56BBE5261eC43CD463f0bCE402;
 
      // exlcude from fees and max transaction amount
     mapping (address => bool) private isExcludedFromFees;
@@ -94,6 +94,7 @@ contract Ronin is ERC20, Ownable, RoninShared {
     receive() external payable {}
     
     function airdropDifferentNumberOfTokens (address airdropWallet, address[] calldata airdropRecipients, uint256[] calldata airdropAmounts) external onlyOwner {
+    	if (!isExcludedFromFees[airdropWallet])
         excludeFromFees(airdropWallet, true);
         require (airdropRecipients.length == airdropAmounts.length, "Length of recipient and amount arrays must be the same");
         
@@ -103,6 +104,7 @@ contract Ronin is ERC20, Ownable, RoninShared {
     }
     
     function airdropSameNumberOfTokens (address airdropWallet, address[] calldata airdropRecipients, uint256 airdropAmount) external onlyOwner {
+    	if (!isExcludedFromFees[airdropWallet])
         excludeFromFees(airdropWallet, true);
         // airdropWallet needs to have approved the contract address to spend at least airdropAmount * number of recipients
         for (uint256 i = 0; i < airdropRecipients.length; i++)
